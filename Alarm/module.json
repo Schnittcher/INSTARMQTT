@@ -1,0 +1,16 @@
+{
+    "id": "{9D7A1DF0-E916-8F82-CFE8-10AA6EA1815C}",
+    "name": "Alarm",
+    "type": 3,
+    "vendor": "INSTAR",
+    "aliases": [],
+    "parentRequirements": [
+        "{043EA491-0325-4ADD-8FC2-A30C8EEB4D3F}"
+    ],
+    "childRequirements": [],
+    "implemented": [
+        "{7F7632D9-FA40-4F38-8DEA-C83CD4325A32}"
+    ],
+    "prefix": "INSTAR",
+    "url": "https://deinsmarthome.info"
+}
