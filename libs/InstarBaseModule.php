@@ -17,16 +17,18 @@ class InstarBaseModule extends IPSModule
         $this->RegisterPropertyString('MQTTKlientID', '');
 
         $Variables = [];
-        foreach (static::$Variables as $Pos => $Variable) {
+        $i = 0;
+        foreach (static::$Variables as $Ident => $Variable) {
             $Variables[] = [
-                'Ident'        => str_replace(' ', '', $Variable[0]),
-                'Name'         => $this->Translate($Variable[1]),
-                'VarType'      => $Variable[2],
-                'Profile'      => $Variable[3],
-                'Action'       => $Variable[4],
-                'Pos'          => $Pos + 1,
-                'Keep'         => $Variable[5]
+                'Ident'        => $Ident,
+                'Name'         => $this->Translate($Variable[0]),
+                'VarType'      => $Variable[1],
+                'Profile'      => $Variable[2],
+                'Action'       => $Variable[3],
+                'Pos'          => $i,
+                'Keep'         => $Variable[4]
             ];
+            $i++;
         }
         $this->RegisterPropertyString('Variables', json_encode($Variables));
     }
@@ -46,9 +48,9 @@ class InstarBaseModule extends IPSModule
             if ($Variable['Action'] && $VariableActive) {
                 $this->EnableAction($Variable['Ident']);
             }
-            foreach ($NewRows as $Index => $Row) {
-                if ($Variable['Ident'] == str_replace(' ', '', $Row[0])) {
-                    unset($NewRows[$Index]);
+            foreach ($NewRows as $NewRowIdent => $Row) {
+                if ($Variable['Ident'] == $NewRowIdent) {
+                    unset($NewRows[$NewRowIdent]);
                 }
             }
             if ($NewPos < $Variable['Pos']) {
@@ -57,15 +59,15 @@ class InstarBaseModule extends IPSModule
         }
 
         if (count($NewRows) != 0) {
-            foreach ($NewRows as $NewVariable) {
+            foreach ($NewRows as $NewRowIdent => $NewVariable) {
                 $Variables[] = [
-                    'Ident'        => str_replace(' ', '', $NewVariable[0]),
-                    'Name'         => $this->Translate($NewVariable[1]),
-                    'VarType'      => $NewVariable[2],
-                    'Profile'      => $NewVariable[3],
-                    'Action'       => $NewVariable[4],
+                    'Ident'        => $NewRowIdent,
+                    'Name'         => $this->Translate($NewVariable[0]),
+                    'VarType'      => $NewVariable[1],
+                    'Profile'      => $NewVariable[2],
+                    'Action'       => $NewVariable[3],
                     'Pos'          => ++$NewPos,
-                    'Keep'         => $NewVariable[5]
+                    'Keep'         => $NewVariable[4]
                 ];
             }
             IPS_SetProperty($this->InstanceID, 'Variables', json_encode($Variables));
@@ -78,16 +80,18 @@ class InstarBaseModule extends IPSModule
     {
         $NewRows = static::$Variables;
         $Variables = [];
-        foreach ($NewRows as $Pos => $Variable) {
+        $i = 0;
+        foreach ($NewRows as $Ident => $Variable) {
             $Variables[] = [
-                'Ident'        => str_replace(' ', '', $Variable[0]),
-                'Name'         => $this->Translate($Variable[1]),
-                'VarType'      => $Variable[2],
-                'Profile'      => $Variable[3],
-                'Action'       => $Variable[4],
-                'Pos'          => $Pos + 1,
-                'Keep'         => $Variable[5]
+                'Ident'        => $Ident,
+                'Name'         => $this->Translate($Variable[0]),
+                'VarType'      => $Variable[1],
+                'Profile'      => $Variable[2],
+                'Action'       => $Variable[3],
+                'Pos'          => $i,
+                'Keep'         => $Variable[4]
             ];
+            $i++;
         }
         IPS_SetProperty($this->InstanceID, 'Variables', json_encode($Variables));
         IPS_ApplyChanges($this->InstanceID);
@@ -121,5 +125,16 @@ class InstarBaseModule extends IPSModule
             $last_error = error_get_last();
             echo $last_error['message'];
         }
+    }
+
+    protected function getTopicFromArray($variables, $topic)
+    {
+        foreach ($variables as $index => $variable) {
+            if ($variable[5] == $topic) {
+                return $index;
+            }
+        }
+        $this->SendDebug(__FUNCTION__ . ' :: Missing Endpoint', $topic, 0);
+        return false;
     }
 }
