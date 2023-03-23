@@ -74,6 +74,10 @@ class InstarBaseModule extends IPSModule
             IPS_ApplyChanges($this->InstanceID);
             return;
         }
+
+        //Setze Filter für ReceiveData
+        $MQTTTopic = $this->ReadPropertyString('MQTTTopicPraefix') . '/' . $this->ReadPropertyString('MQTTKlientID') . '/status/' . static::SUBTOPIC;
+        $this->SetReceiveDataFilter('.*' . $MQTTTopic . '.*');
     }
 
     public function resetVariables()

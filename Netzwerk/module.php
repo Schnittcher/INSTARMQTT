@@ -89,9 +89,5 @@ class Netzwerk extends InstarBaseModule
     {
         //Never delete this line!
         parent::ApplyChanges();
-
-        //Setze Filter für ReceiveData
-        $MQTTTopic = $this->ReadPropertyString('MQTTTopicPraefix') . '/' . $this->ReadPropertyString('MQTTKlientID') . '/status/' . static::SUBTOPIC;
-        $this->SetReceiveDataFilter('.*' . $MQTTTopic . '.*');
     }
 }
