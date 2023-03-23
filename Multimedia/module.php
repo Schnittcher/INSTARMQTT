@@ -154,82 +154,8 @@ class Multimedia extends InstarBaseModule
         parent::ApplyChanges();
 
         //Setze Filter für ReceiveData
-        $MQTTTopic = $this->ReadPropertyString('MQTTTopicPraefix') . '/' . $this->ReadPropertyString('MQTTKlientID');
+        $MQTTTopic = $this->ReadPropertyString('MQTTTopicPraefix') . '/' . $this->ReadPropertyString('MQTTKlientID') . '/status/' . static::SUBTOPIC;
         $this->SetReceiveDataFilter('.*' . $MQTTTopic . '.*');
     }
 
-    public function RequestAction($Ident, $Value)
-    {
-        $Payload = [];
-        $Payload['val'] = '';
-        $Topic = $this->ReadPropertyString('MQTTTopicPraefix') . '/' . $this->ReadPropertyString('MQTTKlientID') . '/' . static::SUBTOPIC . '/';
-
-        switch (static::$Variables[$Ident][1]) {
-            case VARIABLETYPE_BOOLEAN:
-                $Payload['val'] = strval(intval($Value));
-                break;
-            case VARIABLETYPE_INTEGER:
-                if (static::$Variables[$Ident][2] == '~HexColor') {
-                    $color = strval(dechex($Value));
-                    if ($color == '0') {
-                        $color = str_pad($color, 6, '0');
-                    }
-                    $Payload['val'] = $color;
-                    break;
-                }
-                $Payload['val'] = strval($Value);
-                break;
-            default:
-                $Payload['val'] = strval($Value);
-                break;
-        }
-        $Topic .= static::$Variables[$Ident][5];
-        $this->SendMQTT($Topic, json_encode($Payload));
-    }
-
-    public function ReceiveData($JSONString)
-    {
-        $this->SendDebug('ReceiveData :: JSON', $JSONString, 0);
-
-        if (!empty($this->ReadPropertyString('MQTTTopicPraefix')) && (!empty($this->ReadPropertyString('MQTTKlientID')))) {
-            $Buffer = json_decode($JSONString, true);
-            //Für MQTT Fix in IPS Version 6.3
-            if (IPS_GetKernelDate() > 1670886000) {
-                $Buffer['Payload'] = utf8_decode($Buffer['Payload']);
-            }
-
-            $this->SendDebug('ReceiveData :: JSON Payload', $Buffer['Payload'], 0);
-            $Payload = json_decode($Buffer['Payload'], true);
-            if (array_key_exists('Topic', $Buffer)) {
-                if (preg_match('~/status/multimedia/(.*)~', $Buffer['Topic'], $matches)) {
-                    $Endpoint = $matches[1];
-                    $Ident = $this->getTopicFromArray(static::$Variables, $Endpoint);
-                    switch (static::$Variables[$Ident][1]) {
-                        case VARIABLETYPE_BOOLEAN:
-                            $this->SetValue($Ident, boolval($Payload['val']));
-                            break;
-                        case VARIABLETYPE_INTEGER:
-                            switch (static::$Variables[$Ident][2]) {
-                                case '~HexColor':
-                                    $this->SetValue($Ident, hexdec($Payload['val']));
-                                    break;
-                                default:
-                                    $this->SetValue($Ident, intval($Payload['val']));
-                                    break;
-                            }
-                            break;
-                        case VARIABLETYPE_FLOAT:
-                            $this->SetValue($Ident, floatval($Payload['val']));
-                            break;
-                        case VARIABLETYPE_STRING:
-                            $this->SetValue($Ident, strval($Payload['val']));
-                            break;
-                        default:
-                            $this->SendDebug(__FUNCTION__ . ' :: Switch/Case Default', static::$Variables[$Ident][1]);
-                            break;
-                    }
-                }
-            }
-        }
-    }
 }
