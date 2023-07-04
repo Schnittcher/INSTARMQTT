@@ -18,6 +18,7 @@
 ### 2. Voraussetzungen
 
 - IP-Symcon ab Version 6.0
+- MQTT in den Einstellungen der Kamera muss aktiviert sein
 
 ### 3. Software-Installation
 
