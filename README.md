@@ -2,6 +2,9 @@
 
 Folgende Module beinhaltet das INSTARMQTT Repository:
 
+- __Camera__ ([Dokumentation](Camera))  
+	Kurze Beschreibung des Moduls.
+
 - __Netzwerk__ ([Dokumentation](Netzwerk))  
 	Kurze Beschreibung des Moduls.
 

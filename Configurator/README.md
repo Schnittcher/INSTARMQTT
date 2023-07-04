@@ -1,23 +1,40 @@
-# ShellyConfigurator
-   Der Shelly Configurator dient dazu alle Shellys im Netzwerk zu finden.
-   Über den mDNS Dienst versucht der Konfigurator alle Shellys im Netzwerk zu finden, dazu müssen sich die Geräte im selben Netzwerk wie IP-Symcon befinden.
-      
-   ## Inhaltverzeichnis
-   1. [Konfiguration](#1-konfiguration)
-   
-   ## 1. Konfiguration
-  
-   Beim Laden der Konfiguratinsform werden die Geräte im Netzwerk gesucht.
-   In der Liste kann das Gerät ausgewählt werden, welches in IP-Symcon eingerichtet werden soll.
-   Über den Erstellen Button wird die Instanz in IP-Symcon angelegt und die vordefienierte Konfiguration übernommen.
-   
-   Bei nachstendene Geräten kann eine Auswahl erfolgen, mit welcher Konfiguration die Geräte in IP-Symcon angelegt werden sollen:
+# Configurator
+   Der Configurator dient dazu die Kameras hinzuzufügen, um die einzelnen Instanzen zu erstellen.
 
-| Gerät  | Auswahl |
-| ------------- | ------------- |
-| Shelly 1  | Shelly 1 oder Shelly 1 PM  |
-| Shelly 2  | Shelly 2 Relay oder Shelly 2 Shutter  |
-| Shelly 2.5  | Shelly 2.5 Relay oder Shelly 2.5 Shutter  |
-| Shelly RGBW2  | Shelly RGBW 2 Color oder Shelly RGBW 2 White  |
+### Inhaltsverzeichnis
 
-  Anhand der Auswahl wird festgelegt, wie das Shelly Gerät konfiguriert wurde und wie es in IP-Symcon angelegt werden soll.
+- [Configurator](#configurator)
+    - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+    - [1. Funktionsumfang](#1-funktionsumfang)
+    - [2. Voraussetzungen](#2-voraussetzungen)
+    - [3. Software-Installation](#3-software-installation)
+    - [4. Einrichten der Instanzen in IP-Symcon](#4-einrichten-der-instanzen-in-ip-symcon)
+
+### 1. Funktionsumfang
+
+* Hinzufügen der Kameras zum Konfigurator
+* Anlegen der einzelnen Geräteinstanzen
+
+### 2. Voraussetzungen
+
+- IP-Symcon ab Version 6.0
+
+### 3. Software-Installation
+
+* Über den Module Store das 'INSTARMQTT'-Modul installieren.
+
+### 4. Einrichten der Instanzen in IP-Symcon
+
+ Unter 'Instanz hinzufügen' kann das 'INSTARMQTT'-Modul mithilfe des Schnellfilters gefunden werden.  
+	- Weitere Informationen zum Hinzufügen von Instanzen in der [Dokumentation der Instanzen](https://www.symcon.de/service/dokumentation/konzepte/instanzen/#Instanz_hinzufügen)
+
+__Konfigurationsseite__:
+
+Name     | Beschreibung
+-------- | ------------------
+Host         | HIer wird der Hostname oder die IP-Adresse der INSTAR Kamera hinterlegt.
+Username | Der Username für den Login muss hier hinterlegt werden.
+Passwort | Das Passwort für den Login muss hier hinterlegt werden.
+Hinzufügen | Fügt die Kamera der Liste hinzu.
+Lösche selektierten Eintrag | Löscht den Eintrag, welcher in der darunter stehenden Liste markiert ist.
+Konfigurator | Über diese Liste können die einzelnen Geräteinstanzen zu den jeweiligen Kameras angelegt werden.
