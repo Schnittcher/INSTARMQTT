@@ -1,0 +1,50 @@
+{
+    "elements": [
+        {
+            "type": "ValidationTextBox",
+            "name": "MQTTTopicPraefix",
+            "caption": "MQTT Topic Präfix"
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "MQTTKlientID",
+            "caption": "MQTT Klient ID"
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "Host",
+            "caption": "Host"
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "Username",
+            "caption": "Username"
+        },
+        {
+            "type": "PasswordTextBox",
+            "name": "Password",
+            "caption": "Password"
+        },
+        {
+            "type": "Select",
+            "name": "Resolution",
+            "caption": "Resolution",
+            "options": [
+                {
+                    "caption": "High",
+                    "value": 11
+                },
+                {
+                    "caption": "Medium",
+                    "value": 12
+                },
+                {
+                    "caption": "Low",
+                    "value": 13
+                }
+            ]
+        }
+    ],
+    "actions": [],
+    "status": []
+}
