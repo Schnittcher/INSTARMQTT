@@ -44,7 +44,7 @@ class InstarBaseModule extends IPSModule
         foreach ($Variables as $Variable) {
             $VariableActive = $Variable['Keep'];
 
-            @$this->MaintainVariable($Variable['Ident'], $Variable['Name'], $Variable['VarType'], $Variable['Profile'], $Variable['Pos'], $VariableActive);
+            $this->MaintainVariable($Variable['Ident'], $Variable['Name'], $Variable['VarType'], $Variable['Profile'], $Variable['Pos'], $VariableActive);
             if ($Variable['Action'] && $VariableActive) {
                 $this->EnableAction($Variable['Ident']);
             }
