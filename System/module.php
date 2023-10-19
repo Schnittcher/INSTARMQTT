@@ -95,9 +95,6 @@ class System extends InstarBaseModule
         if (!IPS_VariableProfileExists('INSTAR.SystemUpdateNow')) {
             $this->RegisterProfileInteger('INSTAR.SystemUpdateNow', 'Information', '', '', 1, 1, 1);
         }
-        if (!IPS_VariableProfileExists('INSTAR.SystemUpdateNow')) {
-            $this->RegisterProfileInteger('INSTAR.SystemUpdateNow', 'Information', '', '', 1, 1, 1);
-        }
         if (!IPS_VariableProfileExists('INSTAR.SystemWebUITheme')) {
             $this->RegisterProfileStringEx('INSTAR.SystemWebUITheme', 'Information', '', '', [
                 [0, '0', '', 0x00FF00],

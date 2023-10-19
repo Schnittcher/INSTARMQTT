@@ -25,10 +25,10 @@ class Alarm extends InstarBaseModule
         'AlarmActionsFTPSnapshotInterval'    => ['Actions FTP Snapshot Interval', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsInterval', true, true, 'actions/ftp/snapshot/interval'],
         'AlarmActionsFTPSnapshotCount'       => ['Actions FTP Snapshot Count', VARIABLETYPE_INTEGER, '', true, true, 'actions/ftp/snapshot/count'],
         'AlarmActionsFTPVideoEnable'         => ['Actions FTP Video Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/ftp/video/enable'],
-        'AlarmActionsFTPVideoInterval'       => ['Actions FTP Video Interval', VARIABLETYPE_BOOLEAN, 'INSTAR.AlarmActionsInterval', true, true, 'actions/ftp/video/interval'],
-        'AlarmActionsRecordingResolution'    => ['Actions Recording Resolution', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsResolution', true, true, 'actions/recording/resolution'],
+        'AlarmActionsFTPVideoInterval'       => ['Actions FTP Video Interval', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsInterval', true, true, 'actions/ftp/video/interval'],
+        'AlarmActionsRecordingResolution'    => ['Actions Recording Resolution', VARIABLETYPE_STRING, 'INSTAR.AlarmActionsResolution', true, true, 'actions/recording/resolution'],
         'AlarmActionsRecordingDuration'      => ['Actions Recording Duration', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsRecordingDuration', true, true, 'actions/recording/duration'],
-        'AlarmActionsSnapshotResolution'     => ['Actions Snapshot Resolution', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsResolution', true, true, 'actions/snapshot/resolution'],
+        'AlarmActionsSnapshotResolution'     => ['Actions Snapshot Resolution', VARIABLETYPE_STRING, 'INSTAR.AlarmActionsResolution', true, true, 'actions/snapshot/resolution'],
         'AlarmActionsPIREnable'              => ['Actions PIR Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/pir/enable'],
         'AlarmActionsPIRLink'                => ['Actions PIR Link', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/pir/link'],
         'AlarmActionsPIRNightvision'         => ['Actions PIR Nightvision', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/pir/nightvision'],
@@ -37,7 +37,7 @@ class Alarm extends InstarBaseModule
         'AlarmActionsInputLinkIO'            => ['Actions Link IO', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/input/linkio'],
         'AlarmActionsRealyEnable'            => ['Actions Relay Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/relay/enable'],
         'AlarmActionsRealyTime'              => ['Actions Relay Time', VARIABLETYPE_INTEGER, '', true, true, 'actions/relay/time'],
-        'AlarmActionsAlarmsignalCooldown'    => ['Actions Alarmsignal Cooldown', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsAlarmsignalCooldown', true, true, 'actions/alarmsignal/cooldown'],
+        'AlarmActionsAlarmsignalCooldown'    => ['Actions Alarmsignal Cooldown', VARIABLETYPE_STRING, 'INSTAR.AlarmActionsAlarmsignalCooldown', true, true, 'actions/alarmsignal/cooldown'],
         'AlarmActionsAutodetectionEnable'    => ['Actions Autodetection Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/audiodetection/enable'],
         'AlarmActionsAutodetectionThreshold' => ['Actions Autodetection Threshold', VARIABLETYPE_INTEGER, '~Intensity.100', true, true, 'actions/audiodetection/threshold'],
         'AlarmActionsCloudEnable'            => ['Actions Cloud Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/cloud/enable'],
@@ -115,7 +115,7 @@ class Alarm extends InstarBaseModule
         alarm/schedule/audio/friday	{"val":"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"} - {"val":"PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"}
         alarm/schedule/audio/saturday	{"val":"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"} - {"val":"PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"} */
         'AlarmPushEnable'   => ['Push Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'push/enable'],
-        'AlarmPushInterval' => ['Push Interval', VARIABLETYPE_INTEGER, 'INSTAR.AlarmPushInterval', true, true, 'push/interval'],
+        'AlarmPushInterval' => ['Push Interval', VARIABLETYPE_STRING, 'INSTAR.AlarmPushInterval', true, true, 'push/interval'],
     ];
     public function Create()
     {

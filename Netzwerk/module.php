@@ -35,7 +35,7 @@ class Netzwerk extends InstarBaseModule
         'RemoteOWNDDNSEnable'                                  => ['Remote OWN DDNS Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'remote/ownddns/enable'],
         'RemoteOWNDDNSUname'                                   => ['Remote OWN DDNS Uname', VARIABLETYPE_STRING, '', true, true, 'remote/ownddns/uname'],
         'RemoteOWNDDNSPasswd'                                  => ['Remote OWN DDNS Passwd', VARIABLETYPE_STRING, '', true, true, 'remote/ownddns/passwd'],
-        'RemoteOWNDDNSService'                                 => ['Remote OWN DDNS Service', VARIABLETYPE_INTEGER, 'INSTAR.OWNDDNSService', true, true, 'remote/ownddns/service'],
+        'RemoteOWNDDNSService'                                 => ['Remote OWN DDNS Service', VARIABLETYPE_STRING, 'INSTAR.OWNDDNSService', true, true, 'remote/ownddns/service'],
         'RemoteOWNDDNSDomain'                                  => ['Remote OWN DDNS Domain', VARIABLETYPE_STRING, '', true, true, 'remote/ownddns/domain'],
         'RemoteOWNDDNSInterval'                                => ['Remote OWN DDNS Interval', VARIABLETYPE_INTEGER, '', true, true, 'remote/ownddns/interval'],
         'RemoteOWNDDNSToken'                                   => ['Remote OWN DDNS Token', VARIABLETYPE_STRING, '', true, true, 'remote/ownddns/token'],

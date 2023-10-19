@@ -24,7 +24,7 @@ class Tasks extends InstarBaseModule
         task/photoseries/schedule/saturday	{"val":"-week0=NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"} - {"val":"-week0=PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"} */
         'TaskPhotoseriesSnapBase64'                      => ['Photoseries FTP Snap Base64', VARIABLETYPE_STRING, '', true, true, 'photoseries/snap/base64'],
         'TaskVideoPlanrecEnable'                         => ['Video Plan Rec', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'video/planrec/enable'],
-        'TaskVideoPlanrecChannel'                        => ['Video Plan Channel', VARIABLETYPE_BOOLEAN, 'INSTAR.TaskVideoPlanrecChannel', true, true, 'video/planrerc/channel'],
+        'TaskVideoPlanrecChannel'                        => ['Video Plan Channel', VARIABLETYPE_INTEGER, 'INSTAR.TaskVideoPlanrecChannel', true, true, 'video/planrerc/channel'],
         'TaskVideoPlanrecLength'                         => ['Video Plan Length', VARIABLETYPE_INTEGER, '', true, true, 'video/planrec/length'],
         'TaskVideoRecStart'                              => ['Video Rec Start', VARIABLETYPE_INTEGER, 'INSTAR.TaskVideoRecStart', true, true, 'video/rec/start'],
         'TaskVideoRecLength'                             => ['Video Rec Length', VARIABLETYPE_INTEGER, 'INSTAR.TaskVideoRecLength', true, true, 'video/rec/length'],

@@ -50,7 +50,7 @@ class Multimedia extends InstarBaseModule
         'ImageTransformFlip'    => ['Image Transform Flip', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'image/transform/flip'],
         'ImageTransformMirror'  => ['Image Transform Mirror', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'image/transform/mirror'],
         'ImageFlickerMode'      => ['Image Flicker Mode', VARIABLETYPE_INTEGER, 'INSTAR.FlickerMode', true, true, 'image/flicker/mode'],
-        'ImageFlickerFrequency' => ['Image Flicker Frequency', VARIABLETYPE_INTEGER, 'INSTAR.FlickerFrequency', true, true, 'image/flicker/frequency'],
+        'ImageFlickerFrequency' => ['Image Flicker Frequency', VARIABLETYPE_STRING, 'INSTAR.FlickerFrequency', true, true, 'image/flicker/frequency'],
         'ImageGammaAuto'        => ['Image Gamma Auto', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'image/gamma/auto'],
         'ImageGammaPreset'      => ['Image Gamma Auto', VARIABLETYPE_INTEGER, 'INSTAR.Gamma', true, true, 'image/gamma/preset'],
         'ImageGammaGval'        => ['Image Gamma Gval', VARIABLETYPE_INTEGER, '', false, true, 'image/gamma/gval'],
