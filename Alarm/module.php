@@ -27,7 +27,7 @@ class Alarm extends InstarBaseModule
         'AlarmActionsFTPVideoEnable'         => ['Actions FTP Video Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/ftp/video/enable'],
         'AlarmActionsFTPVideoInterval'       => ['Actions FTP Video Interval', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsInterval', true, true, 'actions/ftp/video/interval'],
         'AlarmActionsRecordingResolution'    => ['Actions Recording Resolution', VARIABLETYPE_STRING, 'INSTAR.AlarmActionsResolution', true, true, 'actions/recording/resolution'],
-        'AlarmActionsRecordingDuration'      => ['Actions Recording Duration', VARIABLETYPE_INTEGER, 'INSTAR.AlarmActionsRecordingDuration', true, true, 'actions/recording/duration'],
+        'AlarmActionsRecordingDuration'      => ['Actions Recording Duration', VARIABLETYPE_STRING, 'INSTAR.AlarmActionsRecordingDuration', true, true, 'actions/recording/duration'],
         'AlarmActionsSnapshotResolution'     => ['Actions Snapshot Resolution', VARIABLETYPE_STRING, 'INSTAR.AlarmActionsResolution', true, true, 'actions/snapshot/resolution'],
         'AlarmActionsPIREnable'              => ['Actions PIR Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/pir/enable'],
         'AlarmActionsPIRLink'                => ['Actions PIR Link', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/pir/link'],
@@ -139,7 +139,7 @@ class Alarm extends InstarBaseModule
             ]);
         }
         if (!IPS_VariableProfileExists('INSTAR.AlarmActionsRecordingDuration')) {
-            $this->RegisterProfileStringEx('INSTAR.AlarmActionsRecordingDuration', 'Clock', '', '', [
+            $this->RegisterProfileInteger('INSTAR.AlarmActionsRecordingDuration', 'Clock', '', '', [
                 [15, '15', '', 0x00FF00],
                 [30, '30', '', 0x00FF00],
                 [45, '45', '', 0x00FF00],
