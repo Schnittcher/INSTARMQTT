@@ -18,9 +18,12 @@ declare(strict_types=1);
             $this->RegisterPropertyString('Password', '');
             $this->RegisterPropertyInteger('Resolution', 12);
 
-            $MediaID = IPS_CreateMedia(3);
-            IPS_SetParent($MediaID, $this->InstanceID);
-            IPS_SetName($MediaID, $this->Translate('Stream'));
+            $MedienID = @IPS_GetMediaIDByName('Stream', $this->InstanceID);
+            if ($MedienID == 0) {
+                $MediaID = IPS_CreateMedia(3);
+                IPS_SetParent($MediaID, $this->InstanceID);
+                IPS_SetName($MediaID, $this->Translate('Stream'));
+            }
         }
 
         public function Destroy()
@@ -36,7 +39,7 @@ declare(strict_types=1);
 
             $MedienID = @IPS_GetMediaIDByName('Stream', $this->InstanceID);
             if ($MedienID > 0) {
-                $StreamURL = 'rtsp://'.$this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/livestream/' . $this->ReadPropertyInteger('Resolution');
+                $StreamURL = 'rtsp://' . $this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/livestream/' . $this->ReadPropertyInteger('Resolution');
                 IPS_SetMediaFile($MedienID, $StreamURL, true);
             }
         }
