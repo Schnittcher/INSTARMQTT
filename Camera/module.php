@@ -39,7 +39,7 @@ declare(strict_types=1);
 
             $MedienID = @IPS_GetMediaIDByName('Stream', $this->InstanceID);
             if ($MedienID > 0) {
-                $StreamURL = 'rtsp://' . $this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/livestream/' . $this->ReadPropertyInteger('Resolution');
+                $StreamURL = 'rtsp://' . $this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/' . $this->ReadPropertyInteger('Resolution');
                 IPS_SetMediaFile($MedienID, $StreamURL, true);
             }
         }
