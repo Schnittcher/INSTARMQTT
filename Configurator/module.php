@@ -9,7 +9,7 @@ class Configurator extends IPSModule
         'Features'   => '{382FCB6E-A0E7-7133-14D3-71C750284F29}',
         'Multimedia' => '{A8E45229-0BF9-FDEF-E56A-6A441EE58244}',
         'Netzwerk'   => '{6D738634-5546-92CE-E7CA-5B85965D032F}',
-        'SmartHome'  => '{B6E25B27-E300-E817-6332-ECC0F4CFCA4E}',
+        //'SmartHome'  => '{B6E25B27-E300-E817-6332-ECC0F4CFCA4E}',
         'System'     => '{60EC7692-2116-05DC-1D18-3803FC418F55}',
         'Tasks'      => '{335879D8-B273-AE04-7C06-55A1D70F4739}',
         'Camera'     => '{6EA51045-0E79-4541-85D7-0A1CB9DDF0C5}',
