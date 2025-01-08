@@ -1,8 +1,26 @@
 {
     "translations": {
         "de": {
-            "Translation 1": "Übersetzung 1",
-            "Translation 2": "Übersetzung 2"
+            "Triggered": "Ausgelöst",
+            "Triggered Triggers": "getriggerte Auslöser",
+            "Triggered Object": "getriggertes Objekt",
+            "Alarm enable": "Alarm aktivieren",
+            "PIR enable": "PIR aktivieren",
+            "Input enable": "Eingang aktivieren",
+            "Objects Enable": "Objekterkennung aktivieren",
+            "Objects Link Person": "Objekterkennung Person vorausgesetzt",
+            "Objects Link Vehicle": "Objekterkennung Fahrzeug vorausgesetzt",
+            "Objects Link Animal": "Objekterkennung Tier vorausgesetzt",
+            "Areas Red Enable": "Bereich rot aktivieren",
+            "Areas Red Sensitivity": "Bereich rot Empfindlichkeit",
+            "Areas Blue Enable": "Bereich blau aktivieren",
+            "Areas Blue Sensitivity": "Bereich blau Empfindlichkeit",
+            "Areas Green Enable": "Bereich grün aktivieren",
+            "Areas Green Sensitivity": "Bereich grün Empfindlichkeit",
+            "Areas Yellow Enable": "Bereich gelb aktivieren",
+            "Areas Yellow Sensitivity": "Bereich gelb Empfindlichkeit",
+            "Push enable": "Push aktivieren",
+            "Push Interval": "Push Intervall"
         }
     }
 }
