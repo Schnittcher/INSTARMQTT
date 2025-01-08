@@ -7,7 +7,7 @@ class Configurator extends IPSModule
     private $instarInstances = [
         'Alarm'      => '{9D7A1DF0-E916-8F82-CFE8-10AA6EA1815C}',
         'Features'   => '{382FCB6E-A0E7-7133-14D3-71C750284F29}',
-        'Multimedia' => '{A8E45229-0BF9-FDEF-E56A-6A441EE58244}',
+        //'Multimedia' => '{A8E45229-0BF9-FDEF-E56A-6A441EE58244}',
         'Netzwerk'   => '{6D738634-5546-92CE-E7CA-5B85965D032F}',
         //'SmartHome'  => '{B6E25B27-E300-E817-6332-ECC0F4CFCA4E}',
         'System'     => '{60EC7692-2116-05DC-1D18-3803FC418F55}',
