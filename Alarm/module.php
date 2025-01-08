@@ -9,8 +9,9 @@ class Alarm extends InstarBaseModule
 
     public static $Variables = [
         'AlarmPushAlarm'                     => ['Push Alarm', VARIABLETYPE_INTEGER, '', true, true, 'pushalarm'],
-        'AlarmTriggered'                     => ['Triggered', VARIABLETYPE_INTEGER, 'INSTAR.AlarmTriggered', true, true, 'triggerd'],
-        'AlarmTriggeredObject'               => ['Triggered Object', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'triggerd/object'],
+        'AlarmTriggered'                     => ['Triggered', VARIABLETYPE_INTEGER, 'INSTAR.AlarmTriggered', true, true, 'triggered'],
+        'AlarmTriggeredTriggers'             => ['Triggered Triggers', VARIABLETYPE_INTEGER, 'INSTAR.AlarmTriggered', true, true, 'triggered/triggers'],
+        'AlarmTriggeredObject'               => ['Triggered Object', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'triggered/object'],
         'AlarmActionsStressAlarmEnable'      => ['Actions Stress Alarm Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/stressalarm/enable'],
         'AlarmActionsEnable'                 => ['Actions Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/enable'],
         'AlarmActionsEMailEnable'            => ['Actions E-Mail Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'actions/email/enable'],
