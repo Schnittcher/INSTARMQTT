@@ -17,6 +17,7 @@ declare(strict_types=1);
             $this->RegisterPropertyString('Username', 'admin');
             $this->RegisterPropertyString('Password', '');
             $this->RegisterPropertyInteger('Resolution', 12);
+            $this->RegisterPropertyString('Model', 'from 2k+');
 
             $MedienID = @IPS_GetMediaIDByName('Stream', $this->InstanceID);
             if ($MedienID == 0) {
@@ -37,9 +38,21 @@ declare(strict_types=1);
             //Never delete this line!
             parent::ApplyChanges();
 
+            switch ($this->ReadPropertyString('Model')) {
+                case 'from 2k+':
+                     $StreamURL = 'rtsp://' . $this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/livestream/' . $this->ReadPropertyInteger('Resolution');
+                    break;
+                case 'from hd':
+                $StreamURL = 'rtsp://' . $this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/' . $this->ReadPropertyInteger('Resolution');
+                default:
+                    # code...
+                    break;
+            }
+
+
             $MedienID = @IPS_GetMediaIDByName('Stream', $this->InstanceID);
             if ($MedienID > 0) {
-                $StreamURL = 'rtsp://' . $this->ReadPropertyString('Username') . ':' . $this->ReadPropertyString('Password') . '@' . $this->ReadPropertyString('Host') . '/' . $this->ReadPropertyInteger('Resolution');
+                
                 IPS_SetMediaFile($MedienID, $StreamURL, true);
             }
         }

@@ -3,12 +3,12 @@
         {
             "type": "ValidationTextBox",
             "name": "MQTTTopicPraefix",
-            "caption": "MQTT Topic Präfix"
+            "caption": "MQTT Topic Prefix"
         },
         {
             "type": "ValidationTextBox",
             "name": "MQTTKlientID",
-            "caption": "MQTT Klient ID"
+            "caption": "MQTT Client ID"
         },
         {
             "type": "ValidationTextBox",
@@ -31,16 +31,31 @@
             "caption": "Resolution",
             "options": [
                 {
-                    "caption": "High",
+                    "caption": "11",
                     "value": 11
                 },
                 {
-                    "caption": "Medium",
+                    "caption": "12",
                     "value": 12
                 },
                 {
-                    "caption": "Low",
+                    "caption": "13",
                     "value": 13
+                }
+            ]
+        },
+        {
+            "type": "Select",
+            "name": "Model",
+            "caption": "Model",
+            "options": [
+                {
+                    "caption": "FullHD & HD Cams",
+                    "value": "from hd"
+                },
+                {
+                    "caption": "From 2K+",
+                    "value": "from 2k+"
                 }
             ]
         }

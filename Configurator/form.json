@@ -49,6 +49,16 @@
                 {
                     "caption": "IP Address",
                     "name": "IPAddress",
+                    "width": "150px"
+                },
+                {
+                    "caption": "Name",
+                    "name": "CamName",
+                    "width": "200px"
+                },
+                {
+                    "caption": "Model",
+                    "name": "Model",
                     "width": "auto"
                 },
                 {

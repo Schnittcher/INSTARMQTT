@@ -28,7 +28,7 @@ class Configurator extends IPSModule
         //Never delete this line!
         parent::ApplyChanges();
 
-        $this->SetReceiveDataFilter('this-will-never-match');
+        $this->SetReceiveDataFilter('instar');
     }
 
     public function addCam($Host, $Username, $Password)
@@ -53,14 +53,29 @@ class Configurator extends IPSModule
         $Values = [];
         $i = 1;
         foreach ($cams as $cam) {
+            $mqttConfig = $this->getMqttSettingsFromCam($cam['Host'], $cam['Username'], $cam['Password']);
+            $camInfos = $this->getModelFromCam($cam['Host'], $cam['Username'], $cam['Password']);
+
+            //Model for Stream
+
+            switch ($camInfos['model']) {
+                case 'INSTAR 2K+':
+                case 'INSTAR WQHD':
+                    $model = 'from 2k+';
+                break;
+                default:
+                    $model = 'from hd';
+            }
+
             $Values[] = [
                 'id'            => $i,
                 'IPAddress'     => $cam['Host'],
                 'Username'      => $cam['Username'],
                 'Password'      => $cam['Password'],
+                'CamName'       => $camInfos['name'],
+                'Model'         => $camInfos['model'],
                 'InstanceName'  => '',
             ];
-            $mqttConfig = $this->getMqttSettingsFromCam($cam['Host'], $cam['Username'], $cam['Password']);
             foreach ($this->instarInstances as $key => $instance) {
                 if ($key != 'Camera') {
                     $Values[] = [
@@ -93,6 +108,7 @@ class Configurator extends IPSModule
                                 'Host'             => $cam['Host'],
                                 'Username'         => $cam['Username'],
                                 'Password'         => $cam['Password'],
+                                'Model'            => $model,
                             ]
 
                         ]
@@ -116,6 +132,43 @@ class Configurator extends IPSModule
         }
         $this->WriteAttributeString('Cams', json_encode($cams));
         $this->ReloadForm();
+    }
+
+    private function getModelFromCam($Host, $User, $Password)
+    {
+        {
+
+            $info = [
+                'model'   => '',
+                'name'    => '',
+            ];
+
+            $url = 'http://' . $User . ':' . $Password . '@' . $Host . '/param.cgi?cmd=getserverinfo';
+            $ch = curl_init();
+            $timeout = 5;
+
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+
+            $result = curl_exec($ch);
+            $curl_errno = curl_errno($ch);
+            $curl_error = curl_error($ch);
+            curl_close($ch);
+
+            IPS_LogMessage('test', $result);
+            if ($curl_errno == 0) {
+                $result = explode(';', $result);
+                unset($result[count($result) - 1]); //letzten Wert entfernen (leerzeile)
+                foreach ($result as $value) {
+                    $value = str_replace(["\r\n", "\n", "\r"], '', $value);
+                    list($key, $val) = explode('=', $value);
+                    $info[$key] = str_replace('"', '', $val);
+                }
+            }
+            return $info;
+        }
     }
 
     private function getMqttSettingsFromCam($Host, $User, $Password)

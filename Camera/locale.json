@@ -1,8 +1,12 @@
 {
     "translations": {
         "de": {
-            "Translation 1": "Übersetzung 1",
-            "Translation 2": "Übersetzung 2"
+            "MQTT Topic Prefix": "MQTT Topic Präfix",
+            "MQTT Client ID":"MQTT Client ID",
+            "Username": "Username",
+            "Password": "Passwort",
+            "Resolution": "Auflösung",
+            "Model": "Model"
         }
     }
 }
