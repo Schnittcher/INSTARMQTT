@@ -129,10 +129,16 @@ class InstarBaseModule extends IPSModule
                             }
                             break;
                         case VARIABLETYPE_INTEGER:
+                            IPS_LogMessage('test',static::$Variables[$Ident][2]);
                             switch (static::$Variables[$Ident][2]) {
                                 case '~HexColor':
                                     if (array_key_exists('val', $Payload)) {
                                         $this->SetValue($Ident, hexdec($Payload['val']));
+                                    }
+                                    break;
+                                case '~UnixTimestampTime':
+                                    if (array_key_exists('val', $Payload)) {
+                                        $this->SetValue($Ident, $Payload['val'] - 3600);
                                     }
                                     break;
                                 default:

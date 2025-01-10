@@ -1,0 +1,20 @@
+{
+    "translations": {
+        "de": {
+            "DHCP": "DHCP",
+            "IP-Address": "IP-Adresse",
+            "Netmask": "Netmaske",
+            "Gateway": "Gateway",
+            "Network Type": "Netzwerktyp",
+            "MAC Address": "MAC Adresse",
+            "HTTP Port": "HTTP Port",
+            "HTTPs Port": "HTTPs Port",
+            "RTSP Port": "RTSP Port",
+            "Wifi Enable": "Wifi aktiviert",
+            "Wifi WPS": "Wifi WPS",
+            "ONVIF Enable": "ONVIF aktiviert",
+            "ONVIF Port": "ONVIF Port",
+            "ONVIF SSL Port": "ONVIF SSL Port"
+        }
+    }
+}

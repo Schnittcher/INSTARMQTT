@@ -1,8 +1,32 @@
 {
     "translations": {
         "de": {
-            "Translation 1": "Übersetzung 1",
-            "Translation 2": "Übersetzung 2"
+            "Language": "Sprache",
+            "Model": "Modell",
+            "Name": "Name",
+            "Date of installation": "Installationsdatum",
+            "Hardware-Version": "Hardware-Version",
+            "Firmware-Version": "Firmware-Version",
+            "WebUI-Version": "WebUI-Version",
+            "Serialunmber": "Seriennummer",
+            "Reboot Now": "Sofortiger Neustart",
+            "Reboot planned": "Geplanter Neustart",
+            "Reboot planned Day": "Tag des geplanten Neustarts",
+            "Reboot planned Time": "Uhrzeit des geplanten Neustarts",
+            "Update Available": "Update verfügbar",
+            "Update Info": "Update Information",
+            "Update Progress": "Update Fortschritt",
+            "Update Now": "Sofortiges Update",
+            "Restart": "Neustart",
+            "Update": "Aktualisieren",
+            "Every day": "Jeden Tag",
+            "Monday": "Montag",
+            "Tuesday": "Dienstag",
+            "Wednesday": "Mittwoch",
+            "Thursday": "Donnerstag",
+            "Friday": "Freitag",
+            "Saturday": "Samstag",
+            "Sunday": "Sonntag"
         }
     }
 }

@@ -11,7 +11,7 @@ class Configurator extends IPSModule
         'Netzwerk'   => '{6D738634-5546-92CE-E7CA-5B85965D032F}',
         //'SmartHome'  => '{B6E25B27-E300-E817-6332-ECC0F4CFCA4E}',
         'System'     => '{60EC7692-2116-05DC-1D18-3803FC418F55}',
-        'Tasks'      => '{335879D8-B273-AE04-7C06-55A1D70F4739}',
+        //'Tasks'      => '{335879D8-B273-AE04-7C06-55A1D70F4739}',
         'Camera'     => '{6EA51045-0E79-4541-85D7-0A1CB9DDF0C5}',
     ];
 
@@ -85,7 +85,7 @@ class Configurator extends IPSModule
                         'instanceID'   => $this->getInstanceID($instance, $mqttConfig),
                         'create'       => [
                             'moduleID'      => $instance,
-                            'name'          => $key,
+                            'name'          => $camInfos['name'] . ' ' . $key,
                             'configuration' => [
                                 'MQTTTopicPraefix' => $mqttConfig['mq_prefix'],
                                 'MQTTKlientID'     => $mqttConfig['mq_clientid'],
@@ -101,7 +101,7 @@ class Configurator extends IPSModule
                         'instanceID'   => $this->getInstanceID($instance, $mqttConfig),
                         'create'       => [
                             'moduleID'      => $instance,
-                            'name'          => $key,
+                            'name'          => $camInfos['name'] . ' ' . $key,
                             'configuration' => [
                                 'MQTTTopicPraefix' => $mqttConfig['mq_prefix'],
                                 'MQTTKlientID'     => $mqttConfig['mq_clientid'],

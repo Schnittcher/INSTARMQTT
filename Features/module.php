@@ -8,37 +8,37 @@ class Features extends InstarBaseModule
     const SUBTOPIC = 'features';
 
     public static $Variables = [
-        'EMailSender'                                                                 => ['E-Mail Sender', VARIABLETYPE_STRING, '', true, true, 'email/sender'],
-        'EMailReceiver'                                                               => ['E-Mail Receiver', VARIABLETYPE_STRING, '', true, true, 'email/receiver'],
-        'EMailSubject'                                                                => ['E-Mail Subject', VARIABLETYPE_STRING, '', true, true, 'email/subject'],
-        'EMailText'                                                                   => ['E-Mail Text', VARIABLETYPE_STRING, '', true, true, 'email/text'],
-        'EMailServer'                                                                 => ['E-Mail Server', VARIABLETYPE_STRING, '', true, true, 'email/server'],
-        'EMailSSL'                                                                    => ['E-Mail SSL', VARIABLETYPE_INTEGER, 'INSTAR.EMailSSL', true, true, 'email/ssl'],
-        'EMailPort'                                                                   => ['E-Mail Port', VARIABLETYPE_INTEGER, '', true, true, 'email/port'],
-        'EMailUsername'                                                               => ['E-Mail Username', VARIABLETYPE_STRING, '', true, true, 'email/username'],
-        'EMailPassword'                                                               => ['E-Mail Password', VARIABLETYPE_STRING, '', true, true, 'email/password'],
-        'FTPServer'                                                                   => ['FTP Server', VARIABLETYPE_STRING, '', true, true, 'ftp/server'],
-        'FTPPort'                                                                     => ['FTP Port', VARIABLETYPE_STRING, '', true, true, 'ftp/port'],
-        'FTPUsername'                                                                 => ['FTP Username', VARIABLETYPE_STRING, '', true, true, 'ftp/username'],
-        'FTPPassword'                                                                 => ['FTP Password', VARIABLETYPE_STRING, '', true, true, 'ftp/password'],
-        'FTPPasvMode'                                                                 => ['FTP Pasv Mode', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/pasvmode'],
-        'FTPDirName'                                                                  => ['FTP Dir Name', VARIABLETYPE_STRING, '', true, true, 'ftp/dirname'],
-        'FTPDirMode'                                                                  => ['FTP Dir Mode', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/dirmode'],
-        'FTPssl'                                                                      => ['FTP SSL', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/ssl'],
-        'FTPInsecure'                                                                 => ['FTP Insecure', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/insecure'],
-        'NightvisionAutoLed'                                                          => ['Nightvision Auto LED', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionAutoLED', true, true, 'nightvision/autoled'],
-        'NightvisionAutoIrcut'                                                        => ['Nightvision Auto Ircut', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionAutoIrcut', true, true, 'nightvision/autoircut'],
-        'NightvisionScheduleEnable'                                                   => ['Nightvision Schedule Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'nightvision/schedule/enable'],
-        'NightvisionScheduleDay'                                                      => ['Nightvision Schedule Day', VARIABLETYPE_INTEGER, '', true, true, 'nightvision/schedule/day'],
-        'NightvisionScheduleNight'                                                    => ['Nightvision Schedule Night', VARIABLETYPE_INTEGER, '', true, true, 'nightvision/schedule/night'],
-        'NightvisionThresholdHigh'                                                    => ['Nightvision Threshold High', VARIABLETYPE_STRING, 'INSTAR.NightvisionThreshold', true, true, 'nightvision/threshold/high'],
-        'NightvisionThresholdLow'                                                     => ['Nightvision Threshold Low', VARIABLETYPE_STRING, 'INSTAR.NightvisionThreshold', true, true, 'nightvision/threshold/low'],
-        'NightvisionDelayEnable'                                                      => ['Nightvision Delay Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'nightvision/delay/enable'],
-        'NightvisionDelayTime'                                                        => ['Nightvision Delay Time', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionDelayTime', true, true, 'nightvision/delay/time'],
-        'NightvisionMode'                                                             => ['Nightvision Mode', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionMode', true, true, 'nightvision/mode'],
-        'NightvisionModeOnAlarm'                                                      => ['Nightvision Mode on Alarm', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'nightvision/mode/onalarm'],
-        'NightvisionModeInterval'                                                     => ['Nightvision Mode Interval', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionInterval', true, true, 'nightvision/mode/interval'],
-        'NightvisionCurrentBrightness'                                                => ['Nightvision Current Brightness', VARIABLETYPE_STRING, 'INSTAR.NightvisionCurrentBrightness', true, true, 'nightvision/currentbrightness'],
+        //'EMailSender'                                                                 => ['E-Mail Sender', VARIABLETYPE_STRING, '', true, true, 'email/sender'],
+        //'EMailReceiver'                                                               => ['E-Mail Receiver', VARIABLETYPE_STRING, '', true, true, 'email/receiver'],
+        //'EMailSubject'                                                                => ['E-Mail Subject', VARIABLETYPE_STRING, '', true, true, 'email/subject'],
+        //'EMailText'                                                                   => ['E-Mail Text', VARIABLETYPE_STRING, '', true, true, 'email/text'],
+        //'EMailServer'                                                                 => ['E-Mail Server', VARIABLETYPE_STRING, '', true, true, 'email/server'],
+        //'EMailSSL'                                                                    => ['E-Mail SSL', VARIABLETYPE_INTEGER, 'INSTAR.EMailSSL', true, true, 'email/ssl'],
+        //'EMailPort'                                                                   => ['E-Mail Port', VARIABLETYPE_INTEGER, '', true, true, 'email/port'],
+        //'EMailUsername'                                                               => ['E-Mail Username', VARIABLETYPE_STRING, '', true, true, 'email/username'],
+        //'EMailPassword'                                                               => ['E-Mail Password', VARIABLETYPE_STRING, '', true, true, 'email/password'],
+        //'FTPServer'                                                                   => ['FTP Server', VARIABLETYPE_STRING, '', true, true, 'ftp/server'],
+        //'FTPPort'                                                                     => ['FTP Port', VARIABLETYPE_STRING, '', true, true, 'ftp/port'],
+        //'FTPUsername'                                                                 => ['FTP Username', VARIABLETYPE_STRING, '', true, true, 'ftp/username'],
+        //'FTPPassword'                                                                 => ['FTP Password', VARIABLETYPE_STRING, '', true, true, 'ftp/password'],
+        //'FTPPasvMode'                                                                 => ['FTP Pasv Mode', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/pasvmode'],
+        //'FTPDirName'                                                                  => ['FTP Dir Name', VARIABLETYPE_STRING, '', true, true, 'ftp/dirname'],
+        //'FTPDirMode'                                                                  => ['FTP Dir Mode', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/dirmode'],
+        //'FTPssl'                                                                      => ['FTP SSL', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/ssl'],
+        //'FTPInsecure'                                                                 => ['FTP Insecure', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'ftp/insecure'],
+        'NightvisionAutoLed'                                                          => ['IR-Led control', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionAutoLED', true, true, 'nightvision/autoled'],
+        'NightvisionAutoIrcut'                                                        => ['IR-CUT filter', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionAutoIrcut', true, true, 'nightvision/autoircut'],
+        //'NightvisionScheduleEnable'                                                   => ['Nightvision Schedule Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'nightvision/schedule/enable'],
+        //'NightvisionScheduleDay'                                                      => ['Nightvision Schedule Day', VARIABLETYPE_INTEGER, '', true, true, 'nightvision/schedule/day'],
+        //'NightvisionScheduleNight'                                                    => ['Nightvision Schedule Night', VARIABLETYPE_INTEGER, '', true, true, 'nightvision/schedule/night'],
+        'NightvisionThresholdHigh'                                                    => ['IR Threshold High', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionThreshold', true, true, 'nightvision/threshold/high'],
+        'NightvisionThresholdLow'                                                     => ['IR Threshold Low', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionThreshold', true, true, 'nightvision/threshold/low'],
+        //'NightvisionDelayEnable'                                                      => ['Nightvision Delay Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'nightvision/delay/enable'],
+        //'NightvisionDelayTime'                                                        => ['Nightvision Delay Time', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionDelayTime', true, true, 'nightvision/delay/time'],
+        'NightvisionMode'                                                             => ['IR-LED-Mode', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionMode', true, true, 'nightvision/mode'],
+        //'NightvisionModeOnAlarm'                                                      => ['Nightvision Mode on Alarm', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'nightvision/mode/onalarm'],
+        //'NightvisionModeInterval'                                                     => ['Nightvision Mode Interval', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionInterval', true, true, 'nightvision/mode/interval'],
+        'NightvisionCurrentBrightness'                                                => ['IR Current Brightness', VARIABLETYPE_INTEGER, 'INSTAR.NightvisionCurrentBrightness', true, true, 'nightvision/currentbrightness'],
         'PTZMove'                                                                     => ['PTZ Move', VARIABLETYPE_STRING, 'INSTAR.PTZMove', true, true, 'ptz/move'],
         'PTZMoveStep'                                                                 => ['PTZ Move Step', VARIABLETYPE_STRING, 'INSTAR.PTZMoveStep', true, true, 'ptz/movestep'],
         'PTZPreset'                                                                   => ['PTZ Preset', VARIABLETYPE_STRING, 'INSTAR.PTZPreset', true, true, 'ptz/preset'],
@@ -61,11 +61,11 @@ class Features extends InstarBaseModule
         'PTZTourPresets'                                                              => ['PTZ Tour Presets', VARIABLETYPE_STRING, '', true, true, 'ptz/tourpresets'],
         'PTZTourInterval'                                                             => ['PTZ Tour Interval', VARIABLETYPE_STRING, '', true, true, 'ptz/tourinterval'],
         'PTZTourRepeats'                                                              => ['PTZ Tour Repeats', VARIABLETYPE_INTEGER, 'INSTAR.PTZTourRepeats', true, true, 'ptz/tourrepeats'],
-        'IndicatorPower'                                                              => ['Indicator Power', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'indicator/power'],
-        'IndicatorWifi'                                                               => ['Indicator Wifi', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'indicator/wifi'],
-        'SDAutoDelete'                                                                => ['SD Auto Delete', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'sd/autodelete'],
-        'SDRstorageEnable'                                                            => ['SD Rstorage Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'sd/rstorage/enable'],
-        'SDRstorageDuration'                                                          => ['SD Rstorage Duration', VARIABLETYPE_STRING, 'INSTAR.SDRstorageDuration', true, true, 'sd/rstorage/duration'],
+        'IndicatorPower'                                                              => ['State-LED Power', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'indicator/power'],
+        'IndicatorWifi'                                                               => ['State-LED Wifi', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'indicator/wifi'],
+        //'SDAutoDelete'                                                                => ['SD Auto Delete', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'sd/autodelete'],
+        //'SDRstorageEnable'                                                            => ['SD Rstorage Enable', VARIABLETYPE_BOOLEAN, '~Switch', true, true, 'sd/rstorage/enable'],
+        //'SDRstorageDuration'                                                          => ['SD Rstorage Duration', VARIABLETYPE_STRING, 'INSTAR.SDRstorageDuration', true, true, 'sd/rstorage/duration'],
 
     ];
     public function Create()
@@ -73,32 +73,41 @@ class Features extends InstarBaseModule
         if (!IPS_VariableProfileExists('INSTAR.EMailSSL')) {
             $this->RegisterProfileInteger('INSTAR.EMailSSL', 'Information', '', '', 1, 3, 1);
         }
+
         if (!IPS_VariableProfileExists('INSTAR.NightvisionAutoLED')) {
-            $this->RegisterProfileInteger('INSTAR.NightvisionAutoLED', 'Information', '', '', 0, 2, 1);
+            $this->RegisterProfileIntegerEx('INSTAR.NightvisionAutoLED', 'Information', '', '', [
+                [0, $this->Translate('Disabled'), '', 0x00FF00],
+                [1, $this->Translate('Permanently'), '', 0x00FF00],
+                [2, $this->Translate('Automatically'), '', 0x00FF00],
+            ]);
         }
+
         if (!IPS_VariableProfileExists('INSTAR.NightvisionAutoIrcut')) {
-            $this->RegisterProfileInteger('INSTAR.NightvisionAutoIrcut', 'Information', '', '', 0, 2, 1);
+            $this->RegisterProfileIntegerEx('INSTAR.NightvisionAutoIrcut', 'Information', '', '', [
+                [0, $this->Translate('Day mode'), '', 0x00FF00],
+                [1, $this->Translate('Night mode'), '', 0x00FF00],
+                [2, $this->Translate('Automatically'), '', 0x00FF00],
+            ]);
         }
         if (!IPS_VariableProfileExists('INSTAR.NightvisionThreshold')) {
-            $this->RegisterProfileStringEx('INSTAR.NightvisionThreshold', 'Information', '', '', [
-                [1, '1', '', 0x00FF00],
-                [240, '240', '', 0x00FF00],
-            ]);
+            $this->RegisterProfileInteger('INSTAR.NightvisionThreshold', 'Information', '', '', 1, 240, 1);
         }
         if (!IPS_VariableProfileExists('INSTAR.NightvisionDelayTime')) {
             $this->RegisterProfileInteger('INSTAR.NightvisionDelayTime', 'Clock', '', '', 1, 60, 1);
         }
         if (!IPS_VariableProfileExists('INSTAR.NightvisionMode')) {
-            $this->RegisterProfileInteger('INSTAR.NightvisionMode', 'Information', '', '', 0, 2, 1);
+            $this->RegisterProfileIntegerEx('INSTAR.NightvisionMode', 'Information', '', '', [
+                [0, $this->Translate('940nm'), '', 0x00FF00],
+                [1, $this->Translate('850nm'), '', 0x00FF00],
+                [2, $this->Translate('850nm+940nm'), '', 0x00FF00],
+            ]);
         }
+
         if (!IPS_VariableProfileExists('INSTAR.NightvisionInterval')) {
             $this->RegisterProfileInteger('INSTAR.NightvisionInterval', 'Clock', '', '', 1, 60, 1);
         }
         if (!IPS_VariableProfileExists('INSTAR.NightvisionCurrentBrightness')) {
-            $this->RegisterProfileStringEx('INSTAR.NightvisionCurrentBrightness', 'Information', '', '', [
-                [1, '1', '', 0x00FF00],
-                [240, '240', '', 0x00FF00],
-            ]);
+            $this->RegisterProfileInteger('INSTAR.NightvisionCurrentBrightness', 'Information', '', '', 1, 240, 1);
         }
         if (!IPS_VariableProfileExists('INSTAR.PTZMove')) {
             $this->RegisterProfileStringEx('INSTAR.PTZMove', 'Information', '', '', [

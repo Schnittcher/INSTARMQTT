@@ -1,8 +1,19 @@
 {
     "translations": {
         "de": {
-            "Translation 1": "Übersetzung 1",
-            "Translation 2": "Übersetzung 2"
+            "Disabled": "Deaktiviert",
+            "Permanently": "Dauerhaft",
+            "Automatically": "Automatisch",
+            "Day mode": "Tagmodus",
+            "Night mode": "Nachtmodus",
+            "IR-Led control": "IR-Led Steuerung",
+            "IR-CUT filter": "IR-CUT Filter",
+            "IR-LED-Mode": "IR-LED-Modus",
+            "IR Threshold High": "IR Schwellenwert (oben)",
+            "IR Threshold Low": "IR Schwellenwert (unten)",
+            "IR Current Brightness": "IR Aktueller Helligkeitswert",
+            "State-LED Power": "Status LED Status",
+            "State-LED Wifi": "Status LED Wifi"
         }
     }
 }
