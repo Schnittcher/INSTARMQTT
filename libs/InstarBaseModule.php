@@ -129,7 +129,6 @@ class InstarBaseModule extends IPSModule
                             }
                             break;
                         case VARIABLETYPE_INTEGER:
-                            IPS_LogMessage('test',static::$Variables[$Ident][2]);
                             switch (static::$Variables[$Ident][2]) {
                                 case '~HexColor':
                                     if (array_key_exists('val', $Payload)) {
